@@ -263,7 +263,9 @@ By using per-tenant dedicated control planes, most of the isolation problems due
 
 The improved isolation comes at the  cost of running and maintaining an individual virtual control plane per tenant. In addition, per-tenant control planes do not solve isolation problems in the data plane, such as node-level noisy neighbors or security threats. These must still be addressed separately.
 
-The Kubernetes [Cluster API - Nested (CAPN)](https://github.com/kubernetes-sigs/cluster-api-provider-nested/tree/main/virtualcluster) project provides an implementation of virtual control planes. 
+Their are numerous [Cluster API](https://cluster-api.sigs.k8s.io) providers that extend Cluster API to manage the lifecycle from physical to the virtual:
+* [Cluster API - Nested (CAPN)](https://github.com/kubernetes-sigs/cluster-api-provider-nested/tree/main/virtualcluster) 
+* [Cluster API - vcluster](https://github.com/loft-sh/cluster-api-provider-vcluster)
 
 #### Other implementations
 * [Kamaji](https://github.com/clastix/kamaji)
